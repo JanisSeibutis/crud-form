@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to bottom right, green, rgb(251, 87, 87));
+  height: 100vh;
+  width: 100%;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.output-div {
+  display: flex;
+  gap: 10px;
+}
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 20px;
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+  gap: 10px;
+}
+
+.name-input {
+  height: 25px;
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 2px solid black;
+  text-align: center;
+  font-size: 18px;
+}
+
+.output-field {
+  text-align: center;
+  height: 25px;
+  width: 200px;
+  font-size: 18px;
+  border: none;
+}
+
+.output-field:focus {
+  outline: none; /* Remove outline when input is focused */
+}
+
+.add-btn,
+.clear-btn,
+.edit-btn,
+.delete-btn {
+  height: 26px;
+  border-radius: 4px;
+  width: 50px;
+  padding: 0;
+}
