@@ -9,6 +9,9 @@ form.addEventListener("submit", (event) => {
 });
 
 submitButton.addEventListener("click", () => {
+  if (nameInput.value === "") {
+    return;
+  }
   createNewRow();
   nameInput.value = "";
 });
@@ -26,12 +29,12 @@ function createNewRow() {
   newEditBtn.classList.add("edit-btn");
   newDeleteBtn.classList.add("delete-btn");
   newOutputField.classList.add("output-field");
-  mainDiv.appendChild(newOutputDiv);
+  mainDiv.insertBefore(newOutputDiv, mainDiv.firstChild);
   newOutputDiv.appendChild(newOutputField);
   newOutputDiv.appendChild(newEditBtn);
   newOutputDiv.appendChild(newDeleteBtn);
   newOutputField.value = nameInput.value;
-  newDivs.push(newOutputDiv);
+  newDivs.unshift(newOutputDiv);
   editEvent(newEditBtn, newOutputField);
   deleteEvent(newDeleteBtn, newOutputDiv);
   saveToLocalStorage();
